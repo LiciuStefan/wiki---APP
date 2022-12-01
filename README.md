@@ -1,4 +1,4 @@
-# wiki--- Design Pattern
+# wiki - Design Pattern
 
 Un Design Pattern (motif de conception) est une technique permettant de solutionner des problèmes courants. 
 
@@ -7,7 +7,7 @@ Il existe plusieurs types de Design Pattern :
   - Modèle de structuration
   - modèle de comportement 
  
-Nous allons traiter les Patterns Décorateur ainsi que Visiteur
+Nous allons traiter des Patterns Décorateur ainsi que Visiteur
 
 ## Description générale du pattern "Decorator"
 Le Décorateur est un modele de structuration qui permet d'ajouter des fonctions à un objet en étant moins "rigide" que l'héritage.
