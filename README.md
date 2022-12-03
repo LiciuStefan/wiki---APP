@@ -15,7 +15,7 @@ Le Décorateur est un modèle de structuration qui permet d'ajouter des fonction
 ## Quels problèmes peut-il résoudre ?
 Si on utilise l’héritage, il est nécessaire de définir autant de classes filles que de fonctionnalités, ce qui n’est pas efficace car le nombre de classes peut devenir trop grand. De plus l'héritage n’est pas toujours possible, par exemple si une classe est déclarée finale. En utilisant l’héritage, on ajoute des fonctionnalités de façon statique (à la compilation) 
 
-## Par quelle solutions ?
+## Par quelles solutions ?
 Le modèle de conception décorateur nous permet de définir un ensemble de classes possédant une base commune, mais proposant des variantes, sans utiliser l’héritage.
 Le principe du motif de conception décorateur est d’utiliser la composition: le décorateur contient un objet décoré. Ainsi on peut utiliser plusieurs classes de décoration pour instancier un objet plutôt que de créer une classe à part qui contiendrait du code redondant redondante. De cette manière on respecte le single-responsibility principle et on factorise le code.
 
