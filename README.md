@@ -32,3 +32,8 @@ Pour implémenter le decorator pattern il suffit de créer un interface définis
 
 **sources** 
 https://www.jmdoudoux.fr/java/dej/chap-design-patterns.htm
+
+## Description générale du pattern "Visitor"
+
+
+## Quels problèmes peut-il résoudre ?
