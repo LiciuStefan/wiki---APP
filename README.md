@@ -29,6 +29,7 @@ Pour implémenter le decorator pattern il suffit de créer un interface définis
 
 
 ![image](https://user-images.githubusercontent.com/92160495/205003693-4cbfe6aa-d4a3-4ee3-90c6-b3c6a26d90f4.png)
+![image](https://refactoring.guru/images/patterns/diagrams/decorator/structure.png)
 
 
 
