@@ -30,10 +30,26 @@ Pour implémenter le decorator pattern il suffit de créer un interface définis
 
 ![image](https://user-images.githubusercontent.com/92160495/205003693-4cbfe6aa-d4a3-4ee3-90c6-b3c6a26d90f4.png)
 
-**sources** 
-https://www.jmdoudoux.fr/java/dej/chap-design-patterns.htm
+
 
 ## Description générale du pattern "Visitor"
-
+Le design pattern visitor permet de séparer les implémentations algorithmiques des classes objets. C’est-à-dire qu’en utilisant la méthode visitor, cela nous permet de pouvoir modifier/ajouter du code aux classes objets sans en modifier grandement leur contenu. Ce comportement permet donc de pouvoir travailler à plusieurs sur différentes fonctionnalités, sans gêner les équipes voisines, ni risquer des bugs de part et d’autre. C'est un comportement compliqué à mettre en oeuvre, surtout une fois que le code est déjà bien avancé. Afin de l'utiliser, il vaut mieux l'implémenter dès le départ.
 
 ## Quels problèmes peut-il résoudre ?
+En utilisant une interface visitor et tout ce qu’elle génère, cela nous permet de pouvoir apporter des modifications à notre code, sans pour autant toucher au code source. Si on est dans l’incapacité de toucher au code source pour quelques raisons, on peut quand même y ajouter des fonctionnalités grâce à cette hiérarchie crée au sain de la classe visitor, qui permet de visiter chaque « étage » des classes java implémentées. Cependant, ce comportement est délaissé au vu de sa complexité de mise en œuvre mais aussi à cause de sa rareté d’utilisation.
+
+## Par quelles solutions ?
+En créant une interface visitor, dans le code, qui possède comme une fonction pour chaque étage, qui visite l’étage du code, on peut par la suite créer une classe ConcreteVisitor qui implémente l’interface visitor, et qui implémente donc les fonctions à utiliser en veillant bien à ce qu’elle soit implémentée en fonction des classes des éléments concrets. Par la suite, on veille à ce que les classes possèdent bien la fonction accept avec en paramètre un visitor, afin de pouvoir appeler les fonctions voulues, et donc de ramener les nouvelles fonctionnalités implémentées dans ConcreteVisitor.
+
+## Comment mettre en oeuvre le Decorator pattern ?
+Afin de l’implémenter, il nous faut donc tout d’abord l’interface Visitor, qui définit les méthodes qui vont être utilisées, avec en paramètre les objets concrets spécifiés (méthode double dispatch). Puis, par la suite on crée donc la méthode ConcreteVisitor, où ici on implémente les méthodes définies dans l’interface Visitor, afin de pouvoir les utiliser par la suite. Pour finir, on doit implémenter dans l’interface principale des objets la fonction accept de paramètre visitor, afin de pour avoir accès aux méthodes fraîchement implémentées dans chaque objet, qu’on pourra appeler en mettant en paramètre l’objet voulu (on mettra this).
+
+![image](https://refactoring.guru/images/patterns/diagrams/visitor/structure-fr.png?id=41414651c6e0a43124f0485eb4169bf2)
+
+**sources** 
+
+https://www.jmdoudoux.fr/java/dej/chap-design-patterns.htm
+https://refactoring.guru/fr/design-patterns/visitor
+https://refactoring.guru/fr/design-patterns/visitor-double-dispatch
+https://fr.wikipedia.org/wiki/Visiteur_(patron_de_conception)#Définition
+https://refactoring.guru/fr/design-patterns/visitor/java/example#example-0--visitor-XMLExportVisitor-java
