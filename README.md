@@ -50,6 +50,8 @@ Afin de l’implémenter, il nous faut donc tout d’abord l’interface Visitor
 **sources** 
 
 https://www.jmdoudoux.fr/java/dej/chap-design-patterns.htm
+https://refactoring.guru/design-patterns/decorator
+https://en.wikipedia.org/wiki/Decorator_pattern
 https://refactoring.guru/fr/design-patterns/visitor
 https://refactoring.guru/fr/design-patterns/visitor-double-dispatch
 https://fr.wikipedia.org/wiki/Visiteur_(patron_de_conception)#Définition
