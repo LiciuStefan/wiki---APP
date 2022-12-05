@@ -42,7 +42,7 @@ En utilisant une interface visitor et tout ce qu’elle génère, cela nous perm
 ## Par quelles solutions ?
 En créant une interface visitor, dans le code, qui possède comme une fonction pour chaque étage, qui visite l’étage du code, on peut par la suite créer une classe ConcreteVisitor qui implémente l’interface visitor, et qui implémente donc les fonctions à utiliser en veillant bien à ce qu’elle soit implémentée en fonction des classes des éléments concrets. Par la suite, on veille à ce que les classes possèdent bien la fonction accept avec en paramètre un visitor, afin de pouvoir appeler les fonctions voulues, et donc de ramener les nouvelles fonctionnalités implémentées dans ConcreteVisitor.
 
-## Comment mettre en oeuvre le Decorator pattern ?
+## Comment mettre en oeuvre le Visitor pattern ?
 Afin de l’implémenter, il nous faut donc tout d’abord l’interface Visitor, qui définit les méthodes qui vont être utilisées, avec en paramètre les objets concrets spécifiés (méthode double dispatch). Puis, par la suite on crée donc la méthode ConcreteVisitor, où ici on implémente les méthodes définies dans l’interface Visitor, afin de pouvoir les utiliser par la suite. Pour finir, on doit implémenter dans l’interface principale des objets la fonction accept de paramètre visitor, afin de pour avoir accès aux méthodes fraîchement implémentées dans chaque objet, qu’on pourra appeler en mettant en paramètre l’objet voulu (on mettra this).
 
 ![image](https://refactoring.guru/images/patterns/diagrams/visitor/structure-fr.png?id=41414651c6e0a43124f0485eb4169bf2)
