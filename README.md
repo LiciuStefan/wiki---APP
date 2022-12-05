@@ -1,3 +1,5 @@
+MEKERKE ENZO DESSAUD HUGO ROUTIER FABIEN VASILE-STEFAN LICIU SABI RAYANE VESSEYRE LEO
+
 # wiki - Design Pattern
 
 Un Design Pattern (motif de conception) est une technique permettant de solutionner des problèmes courants. 
